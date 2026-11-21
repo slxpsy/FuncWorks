@@ -13,7 +13,7 @@ from reportlab.platypus import (BaseDocTemplate, Frame, PageBreak, PageTemplate,
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = Path(__file__).resolve().parent / "Звіт_Лабораторна_3_оновлений.pdf"
+OUT = Path(__file__).resolve().parent / "lab3.pdf"
 FONT_DIR = Path(r"C:\Windows\Fonts")
 pdfmetrics.registerFont(TTFont("DejaVu", str(FONT_DIR / "times.ttf")))
 pdfmetrics.registerFont(TTFont("DejaVu-Bold", str(FONT_DIR / "timesbd.ttf")))
@@ -23,7 +23,7 @@ pdfmetrics.registerFont(TTFont("DejaVu-Italic", str(FONT_DIR / "timesi.ttf")))
 class Report(BaseDocTemplate):
     def __init__(self, filename: str):
         super().__init__(filename, pagesize=A4, leftMargin=25*mm, rightMargin=25*mm,
-                         topMargin=22*mm, bottomMargin=22*mm, title="Звіт з лабораторної роботи №3")
+                         topMargin=22*mm, bottomMargin=22*mm, title="lab3")
         frame = Frame(self.leftMargin, self.bottomMargin, self.width, self.height, id="body")
         self.addPageTemplates([PageTemplate(id="pages", frames=frame, onPage=self.decorate)])
 

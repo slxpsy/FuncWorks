@@ -21,7 +21,7 @@ Lab_03/
 ├── README.md
 ├── requirements.txt
 ├── report/
-│   ├── Звіт_Лабораторна_3_оновлений.pdf
+│   ├── lab3.pdf
 │   └── screenshots/
 └── tests/
     ├── __init__.py
